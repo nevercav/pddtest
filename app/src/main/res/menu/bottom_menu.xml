@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@mipmap/shouye"
+        android:title="首页" />
+    <item
+        android:id="@+id/nav_recommend"
+        android:icon="@mipmap/tuijian"
+        android:title="推荐" />
+    <item
+        android:id="@+id/nav_query"
+        android:icon="@mipmap/sousuo"
+        android:title="搜索" />
+    <item
+        android:id="@+id/nav_communicate"
+        android:icon="@mipmap/liaotianjilu"
+        android:title="聊天" />
+    <item
+        android:id="@+id/nav_personal"
+        android:icon="@mipmap/user"
+        android:title="个人中心"/>
+
+</menu>

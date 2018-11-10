@@ -1,3 +1,23 @@
 <resources>
     <string name="app_name">pddtest</string>
+    <string-array name="home_top_titles">
+        <item>热门</item>
+        <item>女装</item>
+        <item>百货</item>
+        <item>鞋包</item>
+        <item>食品</item>
+        <item>母婴</item>
+        <item>内衣</item>
+        <item>电器</item>
+        <item>男装</item>
+        <item>家具</item>
+        <item>水果</item>
+        <item>美妆</item>
+        <item>手机</item>
+        <item>家纺</item>
+        <item>运动</item>
+        <item>电脑</item>
+        <item>汽车</item>
+        <item>家装</item>
+    </string-array>
 </resources>
