@@ -8,12 +8,12 @@
         android:id="@+id/tablayout_home"
         android:layout_width="match_parent"
         android:layout_height="36dp"
-        android:background="#f00"
+        android:background="@color/white"
         app:tabMode="scrollable"
         app:tabIndicatorHeight="1dp"
-        app:tabIndicatorColor="@color/white"
-        app:tabSelectedTextColor="#fff"
-        app:tabTextColor="#dce619"
+        app:tabIndicatorColor="#f00"
+        app:tabSelectedTextColor="#f00"
+        app:tabTextColor="#000"
         app:tabGravity="center"
         >
 
