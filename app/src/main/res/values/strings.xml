@@ -20,4 +20,16 @@
         <item>汽车</item>
         <item>家装</item>
     </string-array>
+    <string-array name="query_type">
+        <item>女装</item>
+        <item>鞋包</item>
+        <item>母婴</item>
+        <item>男装</item>
+        <item>食品</item>
+        <item>百货</item>
+        <item>电器</item>
+        <item>家纺</item>
+        <item>家具</item>
+        <item>电脑</item>
+    </string-array>
 </resources>

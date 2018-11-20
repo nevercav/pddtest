@@ -1,5 +1,6 @@
 package adapter;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -10,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.pddtest.android.R;
 import com.pddtest.android.ShowLunboActivity;
 
@@ -19,6 +21,7 @@ import bean.Channel;
 
 public class ChannelAdapter extends RecyclerView.Adapter<ChannelAdapter.ViewHolder> {
     private List<Channel> mChannelList;
+    private Context mContext;
     static class ViewHolder extends RecyclerView.ViewHolder{
         ImageView channelImage1;
         TextView channelName1;
@@ -65,6 +68,7 @@ public class ChannelAdapter extends RecyclerView.Adapter<ChannelAdapter.ViewHold
                 v.getContext().startActivity(intent);
             }
         });
+        mContext=view.getContext();
         return holder;
     }
 
@@ -72,9 +76,11 @@ public class ChannelAdapter extends RecyclerView.Adapter<ChannelAdapter.ViewHold
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Channel channel=mChannelList.get(position);
         holder.channelName1.setText(channel.getName1());
-        holder.channelImage1.setImageResource(channel.getImageId1());
+        //holder.channelImage1.setImageResource(channel.getImageId1());
+        Glide.with(mContext).load(channel.getImageId1()).into(holder.channelImage1);
         holder.channelName2.setText(channel.getName2());
-        holder.channelImage2.setImageResource(channel.getImageId2());
+        //holder.channelImage2.setImageResource(channel.getImageId2());
+        Glide.with(mContext).load(channel.getImageId2()).into(holder.channelImage2);
     }
 
     @Override

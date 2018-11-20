@@ -15,12 +15,13 @@ import fragment.HomeFragment;
 import fragment.PersonalFragemnt;
 import fragment.QueryFragemnt;
 import fragment.RecommendFragment;
+import myview.CustomViewPager;
 import utils.BottomNavigationViewHelper;
 
 public class MainActivity extends AppCompatActivity {
 
     private BottomNavigationView navigation;
-    private ViewPager viewPager;
+    private CustomViewPager viewPager;
     private MenuItem menuItem;
 
     @Override
@@ -32,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void initView() {
         navigation=(BottomNavigationView)findViewById(R.id.bv);
-        viewPager=(ViewPager)findViewById(R.id.bottom_vp);
+        viewPager=findViewById(R.id.bottom_vp);
         BottomNavigationViewHelper.disableShiftMode(navigation);
         ViewPagerAdapter adapter=new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addFragment(new HomeFragment());
@@ -41,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
         adapter.addFragment(new CommunicateFrament());
         adapter.addFragment(new PersonalFragemnt());
         viewPager.setAdapter(adapter);
+        viewPager.setOffscreenPageLimit(0);
         viewPager.setCurrentItem(0);
 
         navigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -90,12 +92,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        viewPager.setOnTouchListener(new View.OnTouchListener() {
+        /*viewPager.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
                 return true;
             }
-        });
+        });*/
+        viewPager.setSlidingEnable(false);//禁止滑动
 
     }
 }

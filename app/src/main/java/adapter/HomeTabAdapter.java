@@ -30,6 +30,7 @@ public class HomeTabAdapter extends FragmentPagerAdapter {
         Fragment fragment;
         if(mlist.size()<=position){
             if(position==0){
+                //fragment=PopFragment.getInstance();
                 fragment=new PopFragment();
             }else {
                 fragment=new testFragment();
