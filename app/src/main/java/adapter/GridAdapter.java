@@ -12,6 +12,7 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.pddtest.android.R;
 
+import java.util.HashMap;
 import java.util.List;
 
 import bean.Type;
@@ -31,6 +32,15 @@ class GridAdapter extends RecyclerView.Adapter<GridAdapter.ViewHolder> {
     public GridAdapter(List<Type> types) {
         mlist=types;
     }
+
+//    private static HashMap<Integer,GridAdapter> dict=new HashMap<>();
+//    public static GridAdapter getAdapter(List<Type> types,int pos){
+//        if(dict.get(pos)==null){
+//            GridAdapter adapter=new GridAdapter(types);
+//            dict.put(pos,adapter);
+//        }
+//        return dict.get(pos);
+//    }
 
     @NonNull
     @Override

@@ -6,11 +6,13 @@
     <ImageView
         android:id="@+id/right_image"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="60dp" />
     <TextView
         android:id="@+id/right_image_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:textSize="12sp"
         android:gravity="center"
         android:textColor="#000"/>
 

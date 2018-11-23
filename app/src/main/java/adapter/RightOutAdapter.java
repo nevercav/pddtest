@@ -45,16 +45,23 @@ public class RightOutAdapter extends RecyclerView.Adapter<RightOutAdapter.ViewHo
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.textView.setText(mTypeList.get(position));
-//        if(holder.rightInRecycler.getAdapter()==null) {
-            holder.rightInRecycler.setAdapter(new GridAdapter(mSrcList.get(position)));
-//        }
-//        else{
-//            holder.rightInRecycler.getAdapter().notifyDataSetChanged();
-//        }
+       if(holder.rightInRecycler.getAdapter()==null) {
+            //if(holder.rightInRecycler.getAdapter()!=GridAdapter.getAdapter(mSrcList.get(position),position));
+            ////holder.rightInRecycler.setAdapter(GridAdapter.getAdapter(mSrcList.get(position),position));
+           holder.rightInRecycler.setAdapter(new GridAdapter(mSrcList.get(position)));
+           //GridAdapter adapter=new GridAdapter(mSrcList.get(position));
+           //holder.rightInRecycler.setAdapter(adapter);
+           //holder.rightInRecycler.setTag(adapter);
+       }
+
     }
 
     @Override
-    public int getItemCount() {
-        return mTypeList.size();
+        public int getItemCount() {
+            return mTypeList.size();
+        }
+    @Override
+    public int getItemViewType(int position) {
+        return position;
     }
 }

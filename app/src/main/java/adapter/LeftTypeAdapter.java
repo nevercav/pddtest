@@ -61,7 +61,7 @@ public class LeftTypeAdapter extends RecyclerView.Adapter<LeftTypeAdapter.ViewHo
 
     @Override
     public void onClick(View v) {
-        listener.onItemClickListener(v,(int)v.getTag());
+        listener.onItemClickListener(v,(int)v.getTag(),-1);
     }
     public void setSelection(int p){
         int preselection=selection;
